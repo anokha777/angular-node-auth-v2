@@ -8,7 +8,7 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
-mongoose.connect("mongodb+srv://anokhaMongoDBuserID:wZBw88V7Yx9uXgRX@cluster0-mijcm.mongodb.net/angular-node-auth", { useNewUrlParser: true })
+mongoose.connect("mongodb+srv://anokhaMongoDBuserID:" +process.env.MONGO_ATLAS_PASSWORD+ "@cluster0-mijcm.mongodb.net/angular-node-auth", { useNewUrlParser: true })
   .then(() => {
     console.log("Connected to database!");
   })
